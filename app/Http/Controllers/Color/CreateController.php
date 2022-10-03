@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Category;
+namespace App\Http\Controllers\Color;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,6 +10,6 @@ class CreateController extends Controller
     public function __invoke()
     {
 
-        return view('adminpanel.category.create');
+        return view('adminpanel.color.create');
     }
 }

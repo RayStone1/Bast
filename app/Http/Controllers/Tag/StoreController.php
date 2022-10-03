@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Category;
+namespace App\Http\Controllers\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Category\StoreRequest;
-use App\Models\Category;
+use App\Http\Requests\Tag\StoreRequest;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
@@ -13,8 +13,7 @@ class StoreController extends Controller
     {
 
         $data=$request->validated();
-
-        Category::firstOrCreate($data);
-        return redirect()->route('category.index');
+        Tag::firstOrCreate($data);
+        return redirect()->route('tag.index');
     }
 }

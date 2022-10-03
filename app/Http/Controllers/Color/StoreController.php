@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Category;
+namespace App\Http\Controllers\Color;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Category\StoreRequest;
-use App\Models\Category;
+use App\Http\Requests\Color\StoreRequest;
+use App\Models\Color;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
@@ -13,8 +13,7 @@ class StoreController extends Controller
     {
 
         $data=$request->validated();
-
-        Category::firstOrCreate($data);
-        return redirect()->route('category.index');
+        Color::firstOrCreate($data);
+        return redirect()->route('color.index');
     }
 }
